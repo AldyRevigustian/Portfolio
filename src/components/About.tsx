@@ -29,7 +29,7 @@ const About = () => {
               About Me
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Passionate about bridging data science and software development
+              Passionate about bridging data and software development
             </p>
           </motion.div>
 
@@ -122,7 +122,7 @@ const About = () => {
                 <div className="space-y-4 text-muted-foreground flex-1">
                   <p className="leading-relaxed text-justify text-sm sm:text-base">
                     I'm a passionate technologist who bridges the gap between
-                    data science/analyst and software development. With
+                    data and software development. With
                     expertise spanning from machine learning algorithms to
                     full-stack applications, I create intelligent solutions that
                     turn complex data into actionable insights.

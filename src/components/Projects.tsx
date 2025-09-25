@@ -28,7 +28,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my work spanning data science, machine learning, and
+            A showcase of my work spanning data analysis, machine learning, and
             software development
           </p>
         </div>
