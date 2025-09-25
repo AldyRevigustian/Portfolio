@@ -24,7 +24,7 @@ const Projects = () => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gradient">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gradient leading-tight pb-1">
             Featured Projects
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">

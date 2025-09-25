@@ -44,7 +44,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gradient">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gradient leading-tight pb-1">
               Let's Work Together
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
