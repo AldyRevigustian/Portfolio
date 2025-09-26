@@ -102,12 +102,12 @@ const About = () => {
               <motion.div
                 initial={
                   shouldReduceMotion
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 20 }
+                    ? { opacity: 1, x: 0 }
+                    : { opacity: 0, x: -20 }
                 }
-                whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="card-elegant p-6 sm:p-8 space-y-4 flex-1 flex flex-col"
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -122,10 +122,10 @@ const About = () => {
                 <div className="space-y-4 text-muted-foreground flex-1">
                   <p className="leading-relaxed text-justify text-sm sm:text-base">
                     I'm a passionate technologist who bridges the gap between
-                    data and software development. With
-                    expertise spanning from machine learning algorithms to
-                    full-stack applications, I create intelligent solutions that
-                    turn complex data into actionable insights.
+                    data and software development. With expertise spanning from
+                    machine learning algorithms to full-stack applications, I
+                    create intelligent solutions that turn complex data into
+                    actionable insights.
                   </p>
                   <p className="leading-relaxed text-justify text-sm sm:text-base">
                     Currently pursuing my degree while working on cutting-edge
