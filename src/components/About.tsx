@@ -48,7 +48,7 @@ const About = () => {
               <div className="card-elegant p-10 sm:p-8 flex-shrink-0">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
                   <div className="relative group flex-shrink-0">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary-glow rounded-full blur opacity-75 group-hover:opacity-100 transition duration-800 animate-pulse"></div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary rounded-full blur opacity-75 group-hover:opacity-100 transition duration-800 animate-pulse"></div>
                     <img
                       src="/assets/profile.png"
                       alt="Profile"
@@ -108,46 +108,48 @@ const About = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="card-elegant p-6 sm:p-8 space-y-4 flex-1 flex flex-col"
+                className=""
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <Code className="w-5 h-5 text-primary" />
+                <div className="card-elegant p-6 sm:p-8 space-y-4 flex-1 flex flex-col">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <Code className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-semibold">
+                      My Journey
+                    </h3>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold">
-                    My Journey
-                  </h3>
-                </div>
 
-                <div className="space-y-4 text-muted-foreground flex-1">
-                  <p className="leading-relaxed text-justify text-sm sm:text-base">
-                    I'm a passionate technologist who bridges the gap between
-                    data and software development. With expertise spanning from
-                    machine learning algorithms to full-stack applications, I
-                    create intelligent solutions that turn complex data into
-                    actionable insights.
-                  </p>
-                  <p className="leading-relaxed text-justify text-sm sm:text-base">
-                    Currently pursuing my degree while working on cutting-edge
-                    projects that combine AI/ML with modern software
-                    architecture. I believe in the power of technology to solve
-                    real-world problems and create meaningful impact.
-                  </p>
-                  <p className="leading-relaxed text-justify text-sm sm:text-base">
-                    I thrive in collaborative environments where ideas transform
-                    into impactful solutions. Continuously exploring new tools
-                    and methodologies, I’m driven by curiosity and a commitment
-                    to lifelong learning-always seeking opportunities to
-                    innovate at the intersection of data, AI, and software
-                    engineering.
-                  </p>
-                </div>
+                  <div className="space-y-4 text-muted-foreground flex-1">
+                    <p className="leading-relaxed text-justify text-sm sm:text-base">
+                      I'm a passionate technologist who bridges the gap between
+                      data and software development. With expertise spanning
+                      from machine learning algorithms to full-stack
+                      applications, I create intelligent solutions that turn
+                      complex data into actionable insights.
+                    </p>
+                    <p className="leading-relaxed text-justify text-sm sm:text-base">
+                      Currently pursuing my degree while working on cutting-edge
+                      projects that combine AI/ML with modern software
+                      architecture. I believe in the power of technology to
+                      solve real-world problems and create meaningful impact.
+                    </p>
+                    <p className="leading-relaxed text-justify text-sm sm:text-base">
+                      I thrive in collaborative environments where ideas
+                      transform into impactful solutions. Continuously exploring
+                      new tools and methodologies, I’m driven by curiosity and a
+                      commitment to lifelong learning-always seeking
+                      opportunities to innovate at the intersection of data, AI,
+                      and software engineering.
+                    </p>
+                  </div>
 
-                <div className="flex items-center gap-2 pt-4 border-t border-border/50">
-                  <Zap className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-primary">
-                    Always learning, always building
-                  </span>
+                  <div className="flex items-center gap-2 pt-4 border-t border-border/50">
+                    <Zap className="w-4 h-4 text-primary" />
+                    <span className="text-sm font-medium text-primary">
+                      Always learning, always building
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
