@@ -40,27 +40,32 @@ const Projects = () => {
             return (
               <motion.div
                 key={`${project.title}-${index}`}
-                className="relative"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                className="relative group"
+                onHoverStart={() => setHoveredIndex(index)}
+                onHoverEnd={() => setHoveredIndex(null)}
                 initial={
                   shouldReduceMotion
                     ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 40 }
+                    : { opacity: 0, y: 30 }
                 }
-                whileInView={
-                  shouldReduceMotion
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 1, y: 0 }
-                }
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1, delay: index * 0.1 }}
               >
-                <Card className="project-card card-elegant overflow-hidden group h-full flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
+                <div className="card-elegant rounded-xl p-6 h-full transition-all duration-300 hover:border-primary/50 relative overflow-hidden">
+                  <motion.div
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ 
+                      scale: hoveredIndex === index ? 1 : 0,
+                      opacity: hoveredIndex === index ? 0.1 : 0 
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className={`absolute inset-0 bg-gradient-to-r ${project.gradient} rounded-xl`}
+                  />
                   <div
                     className={`absolute top-0 left-0 h-1 w-full bg-gradient-to-r ${project.gradient} opacity-50 group-hover:opacity-100 transition-opacity duration-300`}
                   />
-                  <div className="p-6 flex flex-col h-full pt-8">
+                  <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1 pr-3 md:pr-10">
                         <h3 className="text-lg font-semibold leading-snug min-h-[3.5rem] break-words hyphens-auto line-clamp-3">
@@ -74,21 +79,19 @@ const Projects = () => {
                     <p className="text-muted-foreground text-sm mb-3">
                       {project.short_description}
                     </p>
-                    <div className="flex-grow">
-                      <AnimatePresence>
-                        {hoveredIndex === index && (
-                          <motion.p
-                            className="text-white text-sm mb-4"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            {project.long_description}
-                          </motion.p>
-                        )}
-                      </AnimatePresence>
-                    </div>
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ 
+                        opacity: hoveredIndex === index ? 1 : 0,
+                        height: hoveredIndex === index ? 'auto' : 0 
+                      }}
+                      transition={{ duration: 0.5 }}
+                      className="overflow-hidden flex-grow"
+                    >
+                      <p className="text-sm text-white mb-4">
+                        {project.long_description}
+                      </p>
+                    </motion.div>
                     <div className="mt-auto">
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.technologies.map((tech, idx) => (
@@ -104,9 +107,9 @@ const Projects = () => {
                           </Badge>
                         ))}
                       </div>
-                      <Button
-                        size="sm"
-                        className="w-full btn-ghost group"
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
                         onClick={() =>
                           window.open(
                             project.link,
@@ -114,13 +117,14 @@ const Projects = () => {
                             "noopener,noreferrer"
                           )
                         }
+                        className="w-full px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg transition-all duration-300 hover:bg-primary/20 hover:border-primary/40 flex items-center justify-center gap-2"
                       >
-                        <Github className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-                        View on GitHub
-                      </Button>
+                        <Github className="h-4 w-4 transition-transform group-hover:rotate-12" />
+                        <span className="text-sm font-mono">VIEW CODE</span>
+                      </motion.button>
                     </div>
                   </div>
-                </Card>
+                </div>
               </motion.div>
             );
           })}
