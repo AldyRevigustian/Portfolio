@@ -35,8 +35,8 @@ export const experiences = [
     ],
   },
   {
-    title: "Freelancer (Flutter Developer & UI/UX Designer)",
-    job: "Self-Employed",
+    title: "Flutter Developer & UI/UX Designer",
+    job: "Freelancer",
     date: "2023-2024",
     contents: [
       "- Designed mobile and web application interfaces using Figma, creating pixel-perfect mockups and prototypes that aligned with client branding and usability standards.",
