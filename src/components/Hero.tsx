@@ -103,7 +103,7 @@ const Hero = () => {
               asChild={true}
             >
               <a
-                href="/assets/CV.pdf"
+                href="https://drive.google.com/file/d/1JBsFDhDttCNExa4K4f1te8oDMNQboG_6/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center px-4 py-2 bg-primary/10 text-primary border-muted/20 rounded-lg transition-colors hover:bg-primary/20"
