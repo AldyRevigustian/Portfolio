@@ -81,6 +81,8 @@ export const Timeline = memo(({ data }: TimelineProps) => {
               style={{
                 height: heightTransform,
                 opacity: opacityTransform,
+                transform: "translate3d(0, 0, 0)",
+                willChange: "height, opacity",
               }}
               className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-primary via-lavender/50 to-transparent from-[0%] via-[10%] rounded-full"
             />

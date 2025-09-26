@@ -20,7 +20,8 @@ const Hero = () => {
         ).style.transition = `transform 0.9s cubic-bezier(.2,.9,.3,1) ${
           0.6 + i * 0.06
         }s, opacity 0.9s ${0.6 + i * 0.06}s`;
-        (el as HTMLElement).style.transform = "translateY(0) rotateX(0)";
+        (el as HTMLElement).style.transform = "translate3d(0, 0, 0) rotateX(0)";
+        (el as HTMLElement).style.willChange = "transform, opacity";
         (el as HTMLElement).style.opacity = "1";
       });
     }
